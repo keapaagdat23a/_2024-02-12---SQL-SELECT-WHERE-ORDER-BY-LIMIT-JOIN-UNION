@@ -1,5 +1,9 @@
 -- _2024-02-12---SQL-SELECT-WHERE-ORDER-BY-LIMIT-JOIN-UNION
 
+
+
+-- CHAPTER 3
+
 select * from profile limit 10;
 
 use social_medium;
@@ -17,3 +21,20 @@ select * from post order by profile_id, title;
 select profile_id, title from post where profile_id = 5 order by title;
 
 select * from post where title like '%tIps%';
+
+
+-- CHAPTER 3
+
+use social_medium;
+
+select * from post
+join profile
+using (profile_id);
+
+select * from post
+inner join profile
+on post.profile_id = profile.profile_id;
+
+select profile_id, firstname, lastname, title, content from post
+inner join profile
+using (profile_id);
