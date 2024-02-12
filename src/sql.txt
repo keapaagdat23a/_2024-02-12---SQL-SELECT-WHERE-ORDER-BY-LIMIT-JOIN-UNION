@@ -1,3 +1,19 @@
 -- _2024-02-12---SQL-SELECT-WHERE-ORDER-BY-LIMIT-JOIN-UNION
 
--- Test
+select * from profile limit 10;
+
+use social_medium;
+
+select firstname, lastname from profile;
+
+select firstname as 'FIRST', lastname as 'LAST' from profile;
+
+select * from profile where profile_id = 4;
+
+select * from post where created_at between '2024-01-10' and '2024-01-12';
+
+select * from post order by profile_id, title;
+
+select profile_id, title from post where profile_id = 5 order by title;
+
+select * from post where title like '%tIps%';
